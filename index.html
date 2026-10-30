@@ -27,7 +27,7 @@
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:var(--fonte);background:var(--branco);color:var(--tinta);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;padding-bottom:80px;overflow-x:hidden}
+body{font-family:var(--fonte);background:var(--branco);color:var(--tinta);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 img,svg{display:block;max-width:100%}
 a{color:inherit}
 button{font:inherit;color:inherit}
@@ -484,9 +484,12 @@ html.js .rv.in{opacity:1;transform:none}
   var alvos=document.querySelectorAll('.rv');
   if(reduz||!('IntersectionObserver' in window)){alvos.forEach(function(e){e.classList.add('in')})}
   else{var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}})},{threshold:.12,rootMargin:'0px 0px -6% 0px'});alvos.forEach(function(e){io.observe(e)})}
-  var fixo=document.getElementById('fixo'),fim=document.getElementById('contato');
-  if(fixo&&fim&&'IntersectionObserver' in window){
-    new IntersectionObserver(function(es){fixo.classList.toggle('some',es[0].isIntersecting)},{threshold:.15}).observe(fim);
+  var fixo=document.getElementById('fixo');
+  var zonas=[document.querySelector('.heroi'),document.getElementById('contato'),document.querySelector('.rodape')].filter(Boolean);
+  if(fixo&&'IntersectionObserver' in window){
+    var vis=new Set();
+    var iof=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting)vis.add(en.target);else vis.delete(en.target)});fixo.classList.toggle('some',vis.size>0)},{threshold:.05});
+    zonas.forEach(function(z){iof.observe(z)});
   }
 })();
 </script>
