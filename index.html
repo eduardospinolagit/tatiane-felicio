@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Psicóloga em Joinville | Tatiane Felicio, terapia cognitivo-comportamental</title>
+<meta name="description" content="Tatiane Felicio, psicóloga clínica em Joinville (CRP 12/16994), especialista em Terapia Cognitivo-Comportamental, mestre em Psicologia pela Univali e professora universitária. Consultório no Centro, de segunda a sexta. Nota 5,0 no Google.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="robots" content="noindex">
+<script>document.documentElement.classList.add('js')</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --branco:#FFFFFF;
+  --lilas:#F2F0F4;
+  --ameixa:#5A3E66;
+  --ameixa-esc:#45304E;
+  --lavanda:#CFC4DA;
+  --tinta:#231F2A;
+  --cinza:#6B6672;
+  --borda:#E2DDE7;
+  --fonte:"Schibsted Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --gutter:20px;
+  /* escala 17 / 21 / 28 / 37 / 49 / 65 */
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--fonte);background:var(--branco);color:var(--tinta);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;padding-bottom:80px;overflow-x:hidden}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+button{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--ameixa);outline-offset:3px;border-radius:6px}
+.wrap{width:100%;max-width:1120px;margin:0 auto;padding:0 var(--gutter)}
+h1,h2,h3{font-weight:600;letter-spacing:-.025em;color:var(--tinta)}
+h1{font-size:clamp(2.5rem,9.6vw,4.9rem);line-height:1.02}
+h2{font-size:clamp(1.75rem,6.2vw,2.6rem);line-height:1.1}
+h3{font-size:1.3rem;line-height:1.25;letter-spacing:-.015em}
+.lacuna{display:inline-block;background:#F3E3A2;color:#2a2410;padding:0 7px;border-radius:5px;font-size:13px;font-weight:600;line-height:1.7}
+
+/* botões */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-weight:600;font-size:16px;line-height:1;text-decoration:none;padding:17px 24px;border-radius:14px;background:var(--ameixa);color:#fff;transition:background .2s}
+.btn:hover{background:var(--ameixa-esc)}
+.btn svg{width:20px;height:20px;flex:none}
+.link{font-weight:600;color:var(--ameixa);text-decoration:underline;text-decoration-thickness:1.5px;text-underline-offset:5px}
+.link:hover{color:var(--ameixa-esc)}
+
+/* topo */
+.topo .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:72px}
+.marca{text-decoration:none;line-height:1.15}
+.marca b{display:block;font-size:18px;font-weight:700;letter-spacing:-.02em}
+.marca span{font-size:13.5px;color:var(--cinza)}
+.topo nav{display:none;gap:28px;font-size:15px;font-weight:500}
+.topo nav a{text-decoration:none;color:var(--cinza)}
+.topo nav a:hover{color:var(--tinta)}
+.topo .btn{padding:11px 16px;font-size:14.5px;border-radius:11px}
+
+/* hero */
+.heroi{padding:28px 0 64px}
+.heroi .grade{display:grid;gap:40px}
+.heroi .sub{margin-top:20px;font-size:19px;line-height:1.55;color:var(--cinza);max-width:36ch}
+.heroi .acoes{margin-top:30px;display:flex;flex-wrap:wrap;align-items:center;gap:18px 26px}
+.heroi .fato{margin-top:34px;font-size:15px;color:var(--cinza);max-width:40ch}
+.heroi .fato b{color:var(--tinta);font-weight:600}
+
+/* triângulo cognitivo */
+.tri{background:var(--lilas);border-radius:28px;padding:22px 18px 22px}
+.tri .cab{font-size:15px;color:var(--cinza);padding:2px 6px 0}
+.tri .cab b{color:var(--tinta);font-weight:600}
+.tri svg.mapa{width:100%;height:auto;margin-top:6px;overflow:visible}
+.tri .aresta{stroke:var(--lavanda);stroke-width:3;fill:none;stroke-linecap:round}
+.tri .aresta.ativa{stroke:var(--ameixa)}
+.tri .aresta{stroke-dasharray:300;stroke-dashoffset:300;animation:traca 1.1s cubic-bezier(.3,.7,.2,1) forwards}
+.tri .aresta:nth-of-type(2){animation-delay:.25s}.tri .aresta:nth-of-type(3){animation-delay:.5s}
+@keyframes traca{to{stroke-dashoffset:0}}
+.no{cursor:pointer}
+.no circle{fill:var(--branco);stroke:var(--lavanda);stroke-width:3;transition:fill .25s,stroke .25s}
+.no text{font:600 16.5px var(--fonte);fill:var(--tinta);text-anchor:middle;transition:fill .25s}
+.no.ativo circle{fill:var(--ameixa);stroke:var(--ameixa)}
+.no.ativo text{fill:#fff}
+.no:focus{outline:none}
+.no:focus-visible circle{stroke:var(--tinta)}
+.botoes{display:flex;gap:6px;margin-top:4px;flex-wrap:wrap}
+.botoes button{flex:1 1 auto;border:1.5px solid var(--borda);background:var(--branco);border-radius:10px;padding:9px 10px;font-size:14.5px;font-weight:500;cursor:pointer;transition:background .2s,border-color .2s,color .2s}
+.botoes button[aria-pressed="true"]{background:var(--tinta);border-color:var(--tinta);color:#fff}
+.exemplo{background:var(--branco);border-radius:16px;padding:18px 18px 16px;margin-top:12px;min-height:150px}
+.exemplo .linha{display:grid;grid-template-columns:118px 1fr;gap:10px;padding:5px 0;font-size:15.5px;line-height:1.4}
+.exemplo .linha span{color:var(--cinza)}
+.exemplo .linha.foco b{color:var(--ameixa)}
+.exemplo p.na-terapia{margin-top:12px;padding-top:12px;border-top:1px solid var(--borda);font-size:15px;color:var(--cinza);line-height:1.5}
+.exemplo p.na-terapia b{color:var(--tinta);font-weight:600}
+.tri .nota{margin-top:10px;font-size:13px;color:var(--cinza);padding:0 6px}
+
+/* seções */
+.sec{padding:80px 0}
+.sec.lilas{background:var(--lilas)}
+.sec .intro{margin-top:16px;max-width:52ch;color:var(--cinza);font-size:18px}
+
+/* quem é */
+.quem .grade{display:grid;gap:36px}
+.foto{aspect-ratio:4/5;width:min(100%,260px);border-radius:24px;background:var(--lavanda);display:grid;place-items:center}
+.quem .texto p{margin-top:16px;max-width:52ch;font-size:18px}
+.formacao{list-style:none;margin-top:28px;display:grid;gap:12px}
+.formacao li{display:grid;grid-template-columns:22px 1fr;gap:12px;align-items:start;font-size:17px}
+.formacao li svg{width:22px;height:22px;color:var(--ameixa);margin-top:2px}
+.formacao li span{display:block;color:var(--cinza);font-size:15px}
+.formacao li span.lacuna{display:inline-block;color:#2a2410;font-size:13px}
+
+/* etapas */
+.etapas{list-style:none;margin-top:40px;display:grid;gap:14px;counter-reset:e}
+.etapas li{counter-increment:e;background:var(--branco);border-radius:20px;padding:26px 24px;position:relative}
+.etapas li::before{content:counter(e);display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--lavanda);color:var(--ameixa-esc);font-weight:700;font-size:15px;margin-bottom:16px}
+.etapas p{margin-top:6px;color:var(--cinza)}
+.obs-etapas{margin-top:22px;color:var(--cinza);max-width:60ch}
+
+/* avaliações */
+.avals .topo-av{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:12px 24px}
+.avals .media{font-size:17px;color:var(--cinza)}
+.avals .media b{color:var(--tinta)}
+.estrelas{display:inline-flex;gap:3px;vertical-align:-3px;margin-right:6px}
+.estrelas svg{width:17px;height:17px;fill:var(--ameixa)}
+.depo{display:grid;gap:30px;margin-top:40px}
+.depo figure{max-width:54ch}
+.depo blockquote{font-size:19px;line-height:1.55;letter-spacing:-.01em}
+.depo figcaption{margin-top:12px;font-size:15px;color:var(--cinza)}
+.depo figcaption b{color:var(--tinta);font-weight:600}
+
+/* onde */
+.onde .grade{display:grid;gap:30px}
+.mapa-g{border-radius:24px;overflow:hidden;min-height:320px;position:relative;background:var(--lilas)}
+.mapa-g iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:saturate(.35)}
+.dados{display:grid;gap:22px;margin-top:28px}
+.dados h3{font-size:1.05rem;margin-bottom:4px}
+.dados p{color:var(--cinza)}
+
+/* perguntas */
+.pergs{margin-top:34px;max-width:760px}
+.pergs details{background:var(--branco);border-radius:16px;margin-bottom:10px;transition:background .2s}
+.pergs summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 22px;font-weight:600;font-size:17.5px;line-height:1.35}
+.pergs summary::-webkit-details-marker{display:none}
+.pergs summary svg{width:20px;height:20px;flex:none;color:var(--ameixa);transition:transform .25s}
+.pergs details[open] summary svg{transform:rotate(45deg)}
+.pergs details p{padding:0 22px 20px;color:var(--cinza);max-width:60ch}
+
+/* final */
+.final{background:var(--ameixa);color:#F4EFF6;padding:80px 0}
+.final h2{color:#fff;max-width:18ch}
+.final p{margin-top:16px;max-width:44ch;font-size:18px;color:#DCD1E3}
+.final .btn{margin-top:28px;background:#fff;color:var(--ameixa-esc)}
+.final .btn:hover{background:var(--lilas)}
+
+/* rodapé */
+footer{padding:36px 0 40px;font-size:14.5px;color:var(--cinza)}
+footer .grade{display:grid;gap:14px}
+footer b{color:var(--tinta);font-weight:600}
+footer a{text-underline-offset:3px}
+footer .sano{display:inline-flex;align-items:center;gap:8px;color:var(--cinza);text-decoration:none}
+footer .sano:hover{color:var(--tinta)}
+footer .sano svg{width:20px;height:20px;flex:none}
+footer .sano strong{font-weight:700;color:inherit}
+
+/* botão fixo no celular */
+.fixo{position:fixed;left:var(--gutter);right:var(--gutter);bottom:calc(12px + env(safe-area-inset-bottom));z-index:40;box-shadow:0 10px 26px rgba(69,48,78,.35);transition:opacity .3s,transform .3s}
+.fixo.some{opacity:0;transform:translateY(20px);pointer-events:none}
+
+
+/* animações */
+html.js .rv{opacity:0;transform:translateY(22px);transition:opacity 1s cubic-bezier(.2,.65,.2,1),transform 1s cubic-bezier(.2,.65,.2,1);transition-delay:var(--d,0s)}
+html.js .rv.in{opacity:1;transform:none}
+.heroi .entra{animation:entra 1.1s cubic-bezier(.2,.65,.2,1) both;animation-delay:var(--d,0s)}
+@keyframes entra{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.btn{transition:background .25s,transform .25s,box-shadow .25s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(69,48,78,.2)}
+.pergs details p{animation:abre .4s ease}
+@keyframes abre{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.rolar{display:none;position:absolute;left:50%;bottom:22px;transform:translateX(-50%);flex-direction:column;align-items:center;gap:10px;font-size:13px;color:var(--cinza);text-decoration:none}
+.rolar i{display:block;width:1.5px;height:44px;background:var(--borda);position:relative;overflow:hidden;border-radius:2px}
+.rolar i::after{content:"";position:absolute;left:0;top:-44px;width:100%;height:44px;background:var(--ameixa);animation:desce 2.2s cubic-bezier(.6,0,.3,1) infinite}
+@keyframes desce{to{top:44px}}
+.no circle{transition:fill .3s,stroke .3s,transform .3s}
+.no:hover circle{stroke:var(--ameixa)}
+
+@media (min-width:920px){
+  :root{--gutter:40px}
+  body{padding-bottom:0}
+  .topo nav{display:flex}
+  .heroi{min-height:calc(100svh - 72px);display:flex;align-items:center;padding:10px 0 90px;position:relative}
+  .heroi .wrap{width:100%}
+  .heroi .grade{grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
+  .rolar{display:flex}
+  .heroi h1{font-size:clamp(3rem,4.7vw,4.5rem);max-width:13ch}
+  .heroi .sub{margin-top:18px}
+  .heroi .acoes{margin-top:26px}
+  .heroi .fato{margin-top:24px}
+  .tri{padding:30px 28px 26px}
+  .sec{padding:120px 0}
+  .quem .grade{grid-template-columns:340px 1fr;gap:80px;align-items:center}
+  .foto{width:340px}
+  .etapas{grid-template-columns:repeat(3,1fr);gap:20px}
+  .depo{grid-template-columns:1fr 1fr;gap:48px 64px}
+  .onde .grade{grid-template-columns:1.2fr 1fr;gap:64px;align-items:center}
+  .mapa-g{min-height:460px}
+  .final{padding:110px 0}
+  .fixo{display:none}
+  footer .grade{grid-template-columns:1fr auto;align-items:center}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .tri .aresta{animation:none;stroke-dashoffset:0}
+  html.js .rv{opacity:1;transform:none;transition:none}
+  .heroi .entra,.pergs details p,.rolar i::after{animation:none}
+  .btn:hover{transform:none}
+}
+</style>
+</head>
+<body>
+
+<header class="topo">
+  <div class="wrap">
+    <a class="marca" href="#"><b>Tatiane Felicio</b><span>Psicóloga clínica em Joinville</span></a>
+    <nav aria-label="Principal">
+      <a href="#quem">Sobre a Tatiane</a>
+      <a href="#como">Como funciona</a>
+      <a href="#avaliacoes">Avaliações</a>
+      <a href="#onde">Consultório</a>
+    </nav>
+    <a class="btn" href="https://wa.me/5547989071753?text=Ol%C3%A1%2C%20Tatiane!%20Vi%20seu%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20terapia." target="_blank" rel="noopener">Agendar</a>
+  </div>
+</header>
+
+<main>
+<section class="heroi">
+  <div class="wrap grade">
+    <div>
+      <h1 class="entra">Terapia para entender o que você pensa, sente e faz.</h1>
+      <p class="sub entra" style="--d:.12s">Terapia cognitivo-comportamental no Centro de Joinville.</p>
+      <div class="acoes entra" style="--d:.24s">
+        <a class="btn" href="https://wa.me/5547989071753?text=Ol%C3%A1%2C%20Tatiane!%20Vi%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20primeira%20sess%C3%A3o." target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.2 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.8 2.1 1.2 1.1 2.2 1.4 2.5 1.5.3.2.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.4.1.2.1.8-.1 1.4Z"/></svg>
+          Agendar pelo WhatsApp</a>
+        <a class="link" href="#quem">Conhecer a Tatiane</a>
+      </div>
+      <p class="fato entra" style="--d:.36s"><b>Mestre em Psicologia</b> pela Univali, especialista em TCC e professora universitária. Nota 5,0 em 23 avaliações no Google.</p>
+    </div>
+
+    <div class="tri entra" id="tri" style="--d:.2s">
+      <p class="cab"><b>Como a TCC enxerga um momento difícil.</b> Toque em cada ponto.</p>
+      <svg class="mapa" viewBox="0 0 440 316" role="group" aria-label="Triângulo cognitivo: pensamento, emoção e comportamento">
+        <line class="aresta" data-par="pensamento emocao" x1="220" y1="70" x2="84" y2="244"/>
+        <line class="aresta" data-par="pensamento comportamento" x1="220" y1="70" x2="356" y2="244"/>
+        <line class="aresta" data-par="emocao comportamento" x1="84" y1="244" x2="356" y2="244"/>
+        <g class="no" data-no="pensamento" tabindex="0" role="button" aria-label="Pensamento"><circle cx="220" cy="70" r="66"/><text x="220" y="76">Pensamento</text></g>
+        <g class="no" data-no="emocao" tabindex="0" role="button" aria-label="Emoção"><circle cx="84" cy="244" r="66"/><text x="84" y="250">Emoção</text></g>
+        <g class="no" data-no="comportamento" tabindex="0" role="button" aria-label="Comportamento"><circle cx="356" cy="244" r="66"/><text x="356" y="250">Comportamento</text></g>
+      </svg>
+      <div class="exemplo" aria-live="polite">
+        <div class="linha" data-l="pensamento"><span>Pensamento</span><b>"Vou travar na apresentação."</b></div>
+        <div class="linha" data-l="emocao"><span>Emoção</span><b>Ansiedade, coração acelerado.</b></div>
+        <div class="linha" data-l="comportamento"><span>Comportamento</span><b>Adia o ensaio até a véspera.</b></div>
+        <p class="na-terapia" id="naTerapia"></p>
+      </div>
+      <p class="nota">Exemplo ilustrativo. Cada pessoa tem os seus.</p>
+    </div>
+  </div>
+  <a class="rolar" href="#quem">Role para conhecer<i></i></a>
+</section>
+
+<section class="sec lilas" id="quem">
+  <div class="wrap quem">
+    <div class="grade">
+      <div class="foto rv"><span class="lacuna">foto da Tatiane</span></div>
+      <div class="texto">
+        <h2 class="rv">Quem atende é quem também ensina TCC.</h2>
+        <p>A Tatiane Felicio é psicóloga clínica e professora no curso de Psicologia da Católica SC. Na clínica, trabalha com a Terapia Cognitivo-Comportamental: uma terapia com método, atualizada e explicada em linguagem simples.</p>
+        <ul class="formacao">
+          <li class="rv" style="--d:0.00s"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><div>Mestre em Psicologia<span>Univali</span></div></li>
+          <li class="rv" style="--d:0.10s"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><div>Especialista em Terapia Cognitivo-Comportamental<span>UNIFIA, 2023</span></div></li>
+          <li class="rv" style="--d:0.20s"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><div>Professora universitária<span>Curso de Psicologia da Católica SC</span></div></li>
+          <li class="rv" style="--d:0.30s"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><div>Congresso Brasileiro de Terapias Cognitivas<span>Edições de 2025 e 2026</span></div></li>
+          <li class="rv" style="--d:0.40s"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><div>Graduada em Psicologia<span>Faculdade Guilherme Guimbala, 2018</span></div></li>
+          <li class="rv" style="--d:0.50s"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><div>CRP 12/16994</div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="como">
+  <div class="wrap">
+    <h2 class="rv">Como a terapia acontece</h2>
+    <p class="intro rv" style="--d:.1s">Na TCC, a terapia tem começo, meio e fim. Cada sessão dura de 50 minutos a 1 hora, e o trabalho segue objetivos combinados entre vocês.</p>
+    <ol class="etapas">
+      <li class="rv" style="--d:0.00s"><h3>Começo</h3><p>Você conta o que trouxe até aqui e vocês definem juntas o que você quer mudar.</p></li>
+      <li class="rv" style="--d:0.10s"><h3>Meio</h3><p>Você entende como seus pensamentos, emoções e atitudes se ligam, e pratica novas formas de lidar com eles no dia a dia.</p></li>
+      <li class="rv" style="--d:0.20s"><h3>Fim</h3><p>A alta chega quando os sintomas melhoram, você já entende o próprio funcionamento e ganhou recursos para seguir sem a terapia.</p></li>
+    </ol>
+    <p class="obs-etapas">Quanto tempo leva depende de cada caso: do momento que você vive, do seu envolvimento e da relação com a terapeuta.</p>
+  </div>
+</section>
+
+<section class="sec lilas avals" id="avaliacoes">
+  <div class="wrap">
+    <div class="topo-av">
+      <h2 class="rv">O que dizem os pacientes</h2>
+      <p class="media"><span class="estrelas" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.1 6.6.9-4.8 4.6 1.2 6.6L12 17.5 6.1 20.7l1.2-6.6L2.5 9.5l6.6-.9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.1 6.6.9-4.8 4.6 1.2 6.6L12 17.5 6.1 20.7l1.2-6.6L2.5 9.5l6.6-.9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.1 6.6.9-4.8 4.6 1.2 6.6L12 17.5 6.1 20.7l1.2-6.6L2.5 9.5l6.6-.9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.1 6.6.9-4.8 4.6 1.2 6.6L12 17.5 6.1 20.7l1.2-6.6L2.5 9.5l6.6-.9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.1 6.6.9-4.8 4.6 1.2 6.6L12 17.5 6.1 20.7l1.2-6.6L2.5 9.5l6.6-.9z"/></svg></span><b>5,0</b> em 23 avaliações no Google</p>
+    </div>
+    <div class="depo">
+      <figure class="rv" style="--d:0.00s"><blockquote>"Ela foi fundamental para meu tratamento de crises de ansiedade, em menos de um ano, me fez sentir melhor, me ajudando a me direcionar, me incentivando e me fez ver melhor o meu eu e o meu redor."</blockquote><figcaption><b>Kamila Milani</b>, no Google</figcaption></figure>
+      <figure class="rv" style="--d:0.10s"><blockquote>"Sempre me sinto ouvida e respeitada, além de sair dos atendimentos mais leve e com novas perspectivas."</blockquote><figcaption><b>Karina Verchai</b>, no Google</figcaption></figure>
+      <figure class="rv" style="--d:0.20s"><blockquote>"Faz apontamentos coerentes e assertivos. Além de tudo, está em constante aprimoramento na área, transmitindo isso durante as sessões."</blockquote><figcaption><b>Silvana Carlini</b>, no Google</figcaption></figure>
+      <figure class="rv" style="--d:0.30s"><blockquote>"Sabe ouvir e fazer apontamentos de forma precisa, e graças ao seu acompanhamento tenho evoluído bastante no meu modo de vida!"</blockquote><figcaption><b>Marina Duana</b>, no Google</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec onde" id="onde">
+  <div class="wrap grade">
+    <div class="mapa-g rv">
+      <iframe title="Mapa do consultório da Tatiane Felicio, Edifício Turim, Joinville" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Edif%C3%ADcio%20Turim%2C%20R.%209%20de%20Mar%C3%A7o%2C%20737%2C%20Centro%2C%20Joinville%20-%20SC&amp;z=16&amp;output=embed"></iframe>
+    </div>
+    <div>
+      <h2 class="rv">O consultório fica no Centro</h2>
+      <div class="dados">
+        <div class="rv" style="--d:0.00s"><h3>Endereço</h3><p>Edifício Turim, R. 9 de Março, 737, Centro, Joinville<br><a class="link" href="https://www.google.com/maps/search/?api=1&amp;query=Tatiane%20Felicio%20-%20Psic%C3%B3loga%20Cl%C3%ADnica&amp;query_place_id=ChIJkbiwVSqx3pQRCsiBudTOyUs" target="_blank" rel="noopener">Ver no Google Maps</a></p></div>
+        <div class="rv" style="--d:0.10s"><h3>Horário</h3><p>Segunda a sexta, das 9h às 21h.</p></div>
+        <div class="rv" style="--d:0.20s"><h3>Online e valores</h3><p>Valores e horários disponíveis pelo WhatsApp. <span class="lacuna">confirmar se atende online</span></p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec lilas" id="perguntas">
+  <div class="wrap">
+    <h2 class="rv">Perguntas de quem vai começar</h2>
+    <div class="pergs">
+      <details class="rv" style="--d:0.00s"><summary>Preciso ter um problema grave para fazer terapia?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>Não. Muita gente busca a terapia em sofrimento, mas também dá para começar estando bem e querendo se conhecer, entender seus valores ou ter mais qualidade de vida.</p></details>
+      <details class="rv" style="--d:0.10s"><summary>Como sei que é a hora de buscar?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>Quando você percebe que está em sofrimento, que tem dificuldade para resolver questões da vida ou lidar com algumas coisas, ou quando quer se conhecer melhor. Se já existe um diagnóstico de transtorno mental, o mais indicado costuma ser medicamento junto com psicoterapia.</p></details>
+      <details class="rv" style="--d:0.20s"><summary>Quanto tempo dura cada sessão?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>De 50 minutos a 1 hora.</p></details>
+      <details class="rv" style="--d:0.30s"><summary>A terapia tem fim?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>Sim. Na TCC, o processo tem começo, meio e fim. Não dá para prever o tempo exato, porque depende de vários fatores, como o seu envolvimento e o momento que você está vivendo.</p></details>
+      <details class="rv" style="--d:0.40s"><summary>Quanto custa e como agendo?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>Pelo WhatsApp. A Tatiane passa os valores e os horários disponíveis e combina com você a primeira sessão. <span class="lacuna">valores a confirmar</span></p></details>
+    </div>
+  </div>
+</section>
+
+<section class="final" id="contato">
+  <div class="wrap">
+    <h2 class="rv">A primeira mensagem pode ser curta.</h2>
+    <p class="rv" style="--d:.12s">Diga que viu o site e quer começar. A Tatiane responde e combina com você a primeira sessão.</p>
+    <a class="btn rv" style="--d:.24s" href="https://wa.me/5547989071753?text=Ol%C3%A1%2C%20Tatiane!%20Vi%20seu%20site%20e%20quero%20come%C3%A7ar%20a%20terapia." target="_blank" rel="noopener">Escrever para a Tatiane</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap grade">
+    <p><b>Tatiane Felicio</b>, psicóloga clínica, CRP 12/16994. Edifício Turim, R. 9 de Março, 737, Centro, Joinville. <a href="https://wa.me/5547989071753" target="_blank" rel="noopener">(47) 98907-1753</a>, <a href="https://www.instagram.com/psi.tatianefelicio/" target="_blank" rel="noopener">Instagram</a>.</p>
+    <a class="sano" href="https://sanolab.com.br" target="_blank" rel="noopener" aria-label="Desenvolvido por Sano Lab, sanolab.com.br">
+      <span>Desenvolvido por</span>
+      <svg viewBox="0 0 100 100" aria-hidden="true"><defs><mask id="sanoMask"><rect width="100" height="100" fill="#fff"/><circle cx="50" cy="48" r="20" fill="#000"/><circle cx="50" cy="104" r="22" fill="#000"/></mask></defs><circle cx="50" cy="50" r="42" fill="currentColor" mask="url(#sanoMask)"/></svg>
+      <strong>Sano Lab</strong>
+    </a>
+  </div>
+</footer>
+
+<a class="btn fixo" id="fixo" href="https://wa.me/5547989071753?text=Ol%C3%A1%2C%20Tatiane!%20Vi%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20sess%C3%A3o." target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
+
+<script>
+(function(){
+  var textos={
+    pensamento:'<b>Na terapia</b>, você aprende a perceber esse pensamento e a checar se ele se sustenta. Ao mudar a leitura, a emoção e a atitude mudam junto.',
+    emocao:'<b>Na terapia</b>, a emoção vira pista: ela mostra qual pensamento está por trás e ajuda a entender o que você está sentindo.',
+    comportamento:'<b>Na terapia</b>, pequenas mudanças de atitude são testadas na prática e ajudam a enfraquecer o ciclo que mantém o problema.'
+  };
+  var nos=document.querySelectorAll('.no'),arestas=document.querySelectorAll('.aresta'),linhas=document.querySelectorAll('.exemplo .linha'),na=document.getElementById('naTerapia');
+  function ativa(n){
+    nos.forEach(function(g){g.classList.toggle('ativo',g.dataset.no===n);g.setAttribute('aria-pressed',g.dataset.no===n)});
+    arestas.forEach(function(a){a.classList.toggle('ativa',a.dataset.par.indexOf(n)>-1)});
+    linhas.forEach(function(l){l.classList.toggle('foco',l.dataset.l===n)});
+    na.innerHTML=textos[n];
+  }
+  nos.forEach(function(g){
+    g.addEventListener('click',function(){ativa(g.dataset.no)});
+    g.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();ativa(g.dataset.no)}});
+  });
+  ativa('pensamento');
+
+
+  var reduz=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var alvos=document.querySelectorAll('.rv');
+  if(reduz||!('IntersectionObserver' in window)){alvos.forEach(function(e){e.classList.add('in')})}
+  else{var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}})},{threshold:.12,rootMargin:'0px 0px -6% 0px'});alvos.forEach(function(e){io.observe(e)})}
+  var fixo=document.getElementById('fixo'),fim=document.getElementById('contato');
+  if(fixo&&fim&&'IntersectionObserver' in window){
+    new IntersectionObserver(function(es){fixo.classList.toggle('some',es[0].isIntersecting)},{threshold:.15}).observe(fim);
+  }
+})();
+</script>
+</body>
+</html>
